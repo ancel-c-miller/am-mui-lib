@@ -6,7 +6,7 @@ import dts from 'vite-plugin-dts';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({ include: ['lib/**/*.ts', 'lib/**/*.tsx'], insertTypesEntry: true })],
+  plugins: [react(), dts({ include: ['lib'], insertTypesEntry: true })],
   resolve: {
     // Required for path aliases to be recognized in build
     alias: {
