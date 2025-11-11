@@ -1,6 +1,18 @@
 import type { ThemeOptions } from '@mui/material/styles';
 
+declare module '@mui/material/styles' {
+    interface Theme {
+        cssVarPrefix: string;
+    }
+    // allow configuration using `createTheme()`
+    interface ThemeOptions {
+        cssVarPrefix?: string // Custom prefix for CSS variables
+    }
+}
+
 export const tokens: ThemeOptions = {
+    cssVariables: true,
+    cssVarPrefix: 'am-mui',
     palette: {
         mode: 'light',
         primary: {
