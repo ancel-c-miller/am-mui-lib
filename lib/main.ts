@@ -1,1 +1,2 @@
-export const test = 'This is a test';
+export * from './theme/theme';
+export * from './theme/tokens';
