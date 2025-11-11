@@ -1,5 +1,21 @@
-import type { ThemeOptions } from '@mui/material/styles';
-import './material-types'; // Extend MUI theme types & exports on build
+import type { SimplePaletteColorOptions, ThemeOptions } from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+    interface Theme {
+        cssVarPrefix: string;
+    }
+    // allow configuration using `createTheme()`
+    interface ThemeOptions {
+        cssVarPrefix?: string // Custom prefix for CSS variables
+    }
+
+    interface Palette {
+        brand: SimplePaletteColorOptions;
+    }
+    interface PaletteOptions {
+        brand: SimplePaletteColorOptions
+    }
+}
 
 export const tokens: ThemeOptions = {
     cssVariables: true,
@@ -7,9 +23,9 @@ export const tokens: ThemeOptions = {
     palette: {
         mode: 'light',
         brand: {
-            main: '#1976d2',
-            light: '#42a5f5',
-            dark: '#1565c0',
+            main: '#26a69a',
+            light: 'rgb(81, 183, 174)',
+            dark: 'rgb(26, 116, 107)',
             contrastText: '#fff',
         },
         primary: {

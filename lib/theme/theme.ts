@@ -6,6 +6,6 @@ import { MuiButtonOverride } from "./overrides/MuiButton";
 export const theme = createTheme({
     ...tokens,
     components: {
-        MuiButton: MuiButtonOverride,
+        MuiButton: MuiButtonOverride(tokens.palette!) as any,
     },
 });

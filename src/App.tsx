@@ -13,6 +13,7 @@ function App() {
           <Button variant="text" color={color as any}>Text</Button>
           <Button variant="contained" color={color as any}>Contained</Button>
           <Button variant="outlined" color={color as any}>Outlined</Button>
+          <Button variant="dashed" color={color as any}>Dashed</Button>
         </Stack>
       ))}
     </ThemeProvider>
